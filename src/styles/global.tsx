@@ -4,6 +4,7 @@ export const GlobalStyle = createGlobalStyle`
 
     :root{
         --background: #FFFFFF;
+        --gray-200: #eeeeee;
         --orange-900: #F17132;
         --orange-700: #d8652d;
         --yellow-900: #fecf51;
@@ -17,7 +18,7 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
     }
 
-    body, input, textarea, button {
+    body, input, textarea, button, select {
         font: 400 1rem 'Poppins', sans-serif;
     }
 
@@ -26,7 +27,7 @@ export const GlobalStyle = createGlobalStyle`
         border: none;
     }
 
-    a {
+    a, ul, li {
         color: inherit;
         text-decoration: none;
     }

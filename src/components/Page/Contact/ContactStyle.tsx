@@ -10,7 +10,7 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
-    background-color: #eeeeee;
+    background-color: var(--gray-200);
     text-align: center;
     
     z-index: 10;

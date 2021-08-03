@@ -77,7 +77,7 @@ export const Content = styled.div`
         border-radius: 10px;
         margin-left: 5rem;
 
-        width: 5rem;
+        width: 6rem;
         min-height: 3rem;
 
         &:hover {

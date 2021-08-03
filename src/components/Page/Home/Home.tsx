@@ -20,7 +20,7 @@ export default function Home(){
         <>
             <Container>
                 <Content>
-                    <h2>This is your first step <br/>to found a home for you!</h2>
+                    <h2>This is your first step <br/>to find a home for you!</h2>
                     <Button onClick={callListHandle}>Take a look</Button>
                 </Content>
                 <ImgHome src={homePhoto} alt="Home Picture"/>
