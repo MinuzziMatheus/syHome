@@ -2,13 +2,13 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     padding: 0;
-    margin-bottom: 0.9rem;
 
     text-align: center;
     display: flex;
     align-items: center;
     vertical-align: middle;
     flex-direction: row;
+    position: relative;
     
 `;
 

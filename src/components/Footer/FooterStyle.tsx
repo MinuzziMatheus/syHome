@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.footer`
-    bottom: 0;
+    position: absolute;
     width: 100%;
     background-color: var(--orange-900);
     padding-bottom: 2rem;
@@ -12,7 +12,7 @@ export const Container = styled.footer`
         display: flex;
         flex-direction: row;
         vertical-align: middle;
-        padding: 20px 0 0 20px;
+        padding: 14px 0 0 20px;
 
         .logoIcon{
             color: var(--background);

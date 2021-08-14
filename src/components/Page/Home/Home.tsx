@@ -17,7 +17,6 @@ export default function Home(){
     }
 
     return (
-        <>
             <Container>
                 <Content>
                     <h2>This is your first step <br/>to find a home for you!</h2>
@@ -25,6 +24,5 @@ export default function Home(){
                 </Content>
                 <ImgHome src={homePhoto} alt="Home Picture"/>
             </Container>
-        </>
     );
 }
