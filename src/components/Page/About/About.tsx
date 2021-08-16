@@ -26,7 +26,7 @@ export default function About(){
         <Container>
             <Content>
                 <div className="bgContent">
-                    <img src={profileSvg} className={showImgProfile} alt="svg-picture"/>
+                    <img src={profileSvg} className={showImgProfile} aria-hidden alt="svg-picture about prifle"/>
                 </div>
                 <div className="textContent">
                     <h4>Who we are?</h4>

@@ -28,12 +28,35 @@ export const CardBody = styled.div`
 
     .cardImage{
         max-width:100%;
+        max-height:100%;
     }
 
     .cardImage img {
         width: 100%;
+        height: 168px;
         border-top-right-radius: 20px;
         border-top-left-radius: 20px;
+    }
+
+    .cardImage span{
+        position: absolute;
+        text-align: center;
+        height: 48%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        line-height: 10;
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+        background-color: #5a5959;
+        color: #FFF;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .cardImage span:hover{
+        opacity: 0.4;
     }
 
     .cardContent{
@@ -72,11 +95,11 @@ export const CardFooter =  styled.footer`
     color: #FFF;
 
     .cardSize{
-        width: 50%;
+        width: 40%;
         border-right: 1px solid var(--orange-700);
     }
 
     .cardPrice{
-        width: 50%;
+        width: 60%;
     }
 `;

@@ -4,7 +4,7 @@ export const Container = styled.footer`
     position: absolute;
     width: 100%;
     background-color: var(--orange-900);
-    padding-bottom: 2rem;
+    padding-bottom: 3.3rem;
 
     .logoArea{
         vertical-align: middle;
