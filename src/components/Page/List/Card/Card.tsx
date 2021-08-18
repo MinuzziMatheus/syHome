@@ -8,7 +8,7 @@ export default function Card(){
 
     useEffect(() => {
         const fetchHouse = async () =>{
-            const response = await fetch('LINK API AQUI');
+            const response = await fetch('https://syhome-b674c-default-rtdb.firebaseio.com/houses.json');
             const responseData = await response.json();
             const loadedHouses = [];
 
