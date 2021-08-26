@@ -103,3 +103,7 @@ export const CardFooter =  styled.footer`
         width: 60%;
     }
 `;
+
+export const Loading = styled.div`
+
+`;
