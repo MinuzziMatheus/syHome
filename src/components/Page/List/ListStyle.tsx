@@ -6,4 +6,13 @@ export const Container = styled.section`
     margin: 0 auto;
     max-width: 100%;
     min-height: 500px;
+
+    div {
+        display: flex;
+        flex-direction: row;
+        vertical-align: middle;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 `;

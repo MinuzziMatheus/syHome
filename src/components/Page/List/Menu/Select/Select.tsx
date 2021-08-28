@@ -1,8 +1,7 @@
 import { useState} from 'react';
 import { Container } from './SelectStyle';
-// import {  } from "react-icons/fa";
 
-export default function Select(){
+export default function Select(props: any){
    const [isOpen, setIsOpen] = useState(false);
    const [valueSelected, setValueSelected] = useState(String);
    function handleSelect(){
@@ -13,12 +12,13 @@ export default function Select(){
    function handleSelectDisplay(e: any){
       if(e.target.outerText === 'Rent'){
          setValueSelected('Rent');
+         props.filteredType(e.target.outerText);
       }
       if(e.target.outerText === 'Sale'){
          setValueSelected('Sale');
+         props.filteredType(e.target.outerText);
       }
    }
-    
 
    return(
       <Container tabIndex={1} onClick={handleSelect} className={isOpen ? 'active' : ''}>

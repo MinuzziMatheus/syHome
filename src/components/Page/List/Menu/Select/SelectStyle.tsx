@@ -36,6 +36,7 @@ export const Container = styled.div`
         top: 100%;
         left: 0;
         right: 0;
+        z-index: 2;
 
         /* Styles */
         background: var(--background);

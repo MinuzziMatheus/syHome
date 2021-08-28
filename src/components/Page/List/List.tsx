@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { Container } from './ListStyle';
 import Menu from './Menu/Menu';
 import Card from './Card/Card';
@@ -7,9 +7,11 @@ import Card from './Card/Card';
 
 export default function List(){
 
-    const store = useSelector(state => state);
     const [houses, setHouses] = useState([] as any);
     const [isLoading, setIsLoading] = useState(true as boolean);
+    const [filterCity, setFilterCity] = useState('');
+    const [filterDistrict, setFilterDistrict] = useState('');
+    const [filterType, setFilterType] = useState('');
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -27,7 +29,8 @@ export default function List(){
                     neighborhood: responseData[key].neighborhood,
                     city: responseData[key].city,
                     size: responseData[key].size,
-                    price: responseData[key].price
+                    price: responseData[key].price,
+                    type: responseData[key].type,
                 });
             }
             setHouses(loadedHouses);
@@ -43,11 +46,46 @@ export default function List(){
             <p>Loading...</p>
         )
     }
+
+    const filteredCity = (cityName: any) => {
+        setFilterCity(cityName.target.value)
+    };
+
+    const filteredDistrict = (districtName: any) => {
+        setFilterDistrict(districtName.target.value);
+    }
+
+    const filteredType = (typeName: any) => {
+        setFilterType(typeName);
+    }
+
     return(
         <>
             <Container>
-                <Menu />
-                {houses.map((house: any) => <Card house={house}/>)}
+                <Menu onFilterCity={filteredCity} 
+                      onFilterDistrict={filteredDistrict}
+                      onFilterType={filteredType}/>
+                <div className="cardContainer">
+                    {houses.filter((val: any) => {
+                        if(filterCity === ''){
+                            return val
+                        } else if(val.city.toLowerCase().includes(filterCity.toLocaleLowerCase())){
+                            return val
+                        }
+                    }).filter((val: any) => {
+                        if(filterDistrict === ''){
+                            return val
+                        } else if (val.neighborhood.toLowerCase().includes(filterDistrict.toLocaleLowerCase())){
+                            return val
+                        }
+                    }).filter((val: any) => {
+                        if(filterType === ''){
+                            return val
+                        } else if (val.type.toLowerCase().includes(filterType.toLocaleLowerCase())){
+                            return val
+                        }
+                    }).map((house: any) => <Card key={house.id} house={house}/>)}
+                </div>
             </Container>
         </>
     );

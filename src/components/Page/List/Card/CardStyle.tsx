@@ -34,6 +34,9 @@ export const CardBody = styled.div`
     .cardImage img {
         width: 100%;
         height: 168px;
+        position: absolute;
+        left: 0;
+        top: 0;
         border-top-right-radius: 20px;
         border-top-left-radius: 20px;
     }
