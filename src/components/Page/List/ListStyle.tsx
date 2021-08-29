@@ -16,3 +16,13 @@ export const Container = styled.section`
         flex-wrap: wrap;
     }
 `;
+
+export const Loading = styled.p`
+    width: 100%;
+    height: 500px;
+    font-size: 20px;
+    margin: 20px 0;
+    font-weight: bold;
+    text-align: center;
+    color: var(--orange-900);
+`;

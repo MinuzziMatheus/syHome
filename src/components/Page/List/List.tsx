@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { Container } from './ListStyle';
+import { Container, Loading } from './ListStyle';
 import Menu from './Menu/Menu';
 import Card from './Card/Card';
 
@@ -43,7 +43,7 @@ export default function List(){
 
     if(isLoading){
         return (
-            <p>Loading...</p>
+            <Loading>Loading...</Loading>
         )
     }
 
