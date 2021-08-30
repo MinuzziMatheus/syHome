@@ -52,7 +52,7 @@ export const Container = styled.div`
         overflow: hidden;
     }
 
-    .dropdown li a {
+    .dropdown li button {
         display: block;
         text-decoration: none;
         text-align: center;
@@ -60,9 +60,12 @@ export const Container = styled.div`
         padding: 10px 0;
         transition: all 0.3s ease-out;
         border-bottom: 1px solid #e6e8ea;
+
+        width: 100%;
+        background-color: #FFF;
     }
 
-    .dropdown li:last-of-type a {
+    .dropdown li:last-of-type button {
         border: none;
     }
 
@@ -74,7 +77,7 @@ export const Container = styled.div`
 
     /* Hover state */
 
-    .dropdown li:hover a {
+    .dropdown li:hover button {
         color: var(--orange-700);
     }
 

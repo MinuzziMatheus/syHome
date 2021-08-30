@@ -39,7 +39,7 @@ export default function List(){
         }
         
         fetchHouse();
-    }, [])
+    }, []);
 
     if(isLoading){
         return (

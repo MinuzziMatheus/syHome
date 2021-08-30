@@ -24,8 +24,8 @@ export default function Select(props: any){
       <Container tabIndex={1} onClick={handleSelect} className={isOpen ? 'active' : ''}>
          <p>{valueSelected}</p>
          <ul className="dropdown">
-            <li><a href="#" onClick={handleSelectDisplay}>Rent</a></li>
-            <li><a href="#" onClick={handleSelectDisplay}>Sale</a></li>
+            <li><button onClick={handleSelectDisplay}>Rent</button></li>
+            <li><button onClick={handleSelectDisplay}>Sale</button></li>
          </ul>
       </Container>
     );

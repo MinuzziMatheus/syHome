@@ -8,8 +8,8 @@ export default function Header() {
                 <nav>
                     <IconHome></IconHome>
                     <Link to="/">Home</Link>
-                    <Link to="contact">Contact us</Link>
-                    <Link to="about">About</Link>
+                    <Link to="/contact">Contact us</Link>
+                    <Link to="/about">About</Link>
                     <button>Sign up</button>
                 </nav>
             </Content>
