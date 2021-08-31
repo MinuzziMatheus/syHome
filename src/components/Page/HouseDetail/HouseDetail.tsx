@@ -36,7 +36,7 @@ export default function HouseDetail(){
             </ContentLeftSide>
             <ContentRighttSide>
                <h2>{house.title}</h2>
-               <p>{house.description}</p>
+               <p>{house.about}</p>
             </ContentRighttSide>
          </Container>
       </>

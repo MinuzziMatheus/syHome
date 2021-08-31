@@ -31,6 +31,7 @@ export default function List(){
                     size: responseData[key].size,
                     price: responseData[key].price,
                     type: responseData[key].type,
+                    about: responseData[key].about,
                 });
             }
             setHouses(loadedHouses);
