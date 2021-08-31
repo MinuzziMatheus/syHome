@@ -1,6 +1,5 @@
 import { useSelector } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
-// import { FaChevronLeft } from "react-icons/fa";
 
 import { Container,
          ContentLeftSide, 
@@ -11,20 +10,16 @@ import { Container,
 
 export default function HouseDetail(){
    const { id }: {id: string} = useParams();
-   const houses: any = useSelector(state => state);
-
-   const returnHouse = (house: any) => {
-      for(let x = 0; x < house.length; x++) {
-         for(let y = 0; y < house[x].length; y++){
-            if(house[x][y].id === id){
-               const houseUnique = house[x][y];
-               return houseUnique;
+   const house: any = useSelector((state: any) => {
+      for(let x = 0; x < state.length; x++) {
+         for(let y = 0; y < state[x].length; y++){
+            if(state[x][y].id === id){
+               return state[x][y];
             }
          }
       }
-   };
+   });
    
-   const house = returnHouse(houses);
    return(
       <>
          <Link to="/list">
