@@ -4,15 +4,14 @@ export const Container = styled.div`
         /* Size & position */
         position: relative;
         width: 200px;
-        height: 40px;
-        padding: 12px 15px;
+        height: 42px;
+        padding: 9px 15px;
         vertical-align: middle;
         margin: auto 10px 0 0;
 
         /* Styles */
         background: var(--background);
-        border-radius: 5px;
-        box-shadow: 0 1px 0 rgba(0,0,0,0.2);
+        border-radius: 10px;
         cursor: pointer;
         outline: none;
         transition: all 0.3s ease-out;
